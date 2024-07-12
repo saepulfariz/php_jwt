@@ -1,0 +1,81 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "php_jwt",
+    "collectionId": "a14e5025-8f0f-49c9-a565-1021ea0d4653",
+    "dateExported": "2024-07-12T02:48:23.908Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c350fd2a-5603-41bf-9be2-a02fa1cb253b",
+            "colId": "a14e5025-8f0f-49c9-a565-1021ea0d4653",
+            "containerId": "",
+            "name": "LOGIN",
+            "url": "http://localhost/php_jwt/login.php",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-07-12T02:39:57.797Z",
+            "modified": "2024-07-12T02:39:57.797Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "username",
+                    "value": "user1",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "password",
+                    "value": "password1",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\" : \"user1\",\n  \"password\" : \"password1\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "1b341c22-3c37-440d-aea1-d0efa80453d6",
+            "colId": "a14e5025-8f0f-49c9-a565-1021ea0d4653",
+            "containerId": "",
+            "name": "JWT PROTECTED",
+            "url": "http://localhost/php_jwt/protected.php",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-07-12T02:40:45.517Z",
+            "modified": "2024-07-12T02:40:45.517Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjA3NTExMjQsImV4cCI6MTcyMDc1NDcyNCwiZGF0YSI6eyJ1c2VybmFtZSI6InVzZXIxIn19.lz-GpmLddREdV7b9ngEHpH51Ce_HCQWZNxm6evgSQPw"
+                }
+            ]
+        },
+        {
+            "_id": "7095234d-a0d2-4db2-9389-96e23fe56dfc",
+            "colId": "a14e5025-8f0f-49c9-a565-1021ea0d4653",
+            "containerId": "",
+            "name": "REFRESH TOKEN",
+            "url": "http://localhost/php_jwt/refresh.php",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-07-12T02:45:10.229Z",
+            "modified": "2024-07-12T02:45:10.229Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "refreshToken",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjA3NTIxNzksImV4cCI6MTcyMTk2MTc3OSwiZGF0YSI6eyJ1c2VybmFtZSI6InVzZXIxIn19.JaJWoZHS379c2zMxkxXZRhwnhsYM5LdusrA5q4Qrx7c"
+                    }
+                ]
+            }
+        }
+    ],
+    "ref": "eh5BLKx5NQsd3Br_JninavXna-2gC1xDFzYxEj8t5CIrVad5AC-BfWvDh9Boyr35b8l-XDvXnQuzdOmBz7HuqA"
+}
