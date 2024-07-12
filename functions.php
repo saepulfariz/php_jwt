@@ -26,3 +26,19 @@ function decodeToken($token)
         return null;
     }
 }
+
+
+function protectedPage()
+{
+    $headers = getallheaders();
+    $authHeader = $headers['Authorization'] ?? '';
+    $token = str_replace('Bearer ', '', $authHeader);
+
+    $decoded = decodeToken($token);
+    if (!$decoded) {
+        http_response_code(401);
+        echo json_encode(['message' => 'Access denied']);
+        exit;
+    }
+    return true;
+}
